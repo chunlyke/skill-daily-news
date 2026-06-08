@@ -45,13 +45,12 @@ POST /open-apis/docx/v1/documents/{doc_id}/blocks/{doc_id}/children
 
 请求体为块数组，最常用的块类型：
 
-| 块类型 | type_id | text_element 结构 |
-|--------|---------|------------------|
-| 文本段落 | 2 | `{"text_element_style":{},"text_run":{"content":"内容"}}` |
-| 标题1 | 3 | 同上，text_element_style 不变 |
-| 标题2 | 4 | 同上 |
-| 有序列表 | 13 | 同上 |
-| 无序列表 | 14 | 同上 |
+| 块类型 | type_id | content_key | 说明 |
+|--------|---------|-------------|------|
+| 文本段落 | 2 | `text` | 普通段落 |
+| 标题1 | 3 | `heading1` | 一级标题 |
+| 标题2 | 4 | `heading2` | 二级标题 |
+| 无序列表 | 12 | `bullet` | 圆点列表项 |
 
 **注意**：飞书 Docx API 的 block content 格式要求每个块有一组 `children`，每个 child 是一个 text_element。不能直接用 Markdown 字符串写入，必须用结构化的 text_element 数组。
 
