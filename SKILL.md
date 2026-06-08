@@ -34,7 +34,7 @@ license: MIT
 - **使用真实数据** — 确保时效性和来源可追溯
 - **当天新闻优先** — 如果当天没有相关新闻，不推送该板块
 - **推送渠道** — 推送到飞书对话（每天 07:00 Cron 自动执行）
-- **存档到飞书云盘** — 同时创建飞书 Docx 文档保存到「每日日报」文件夹（参见 references/feishu-doc-archive.md）
+- **存档到飞书云盘（必做）** — 完成飞书推送后，必须调用飞书API创建Docx文档并移动到「每日日报」文件夹（参考 references/feishu-doc-archive.md，文件夹token: AaXwfDRWHlGMY9d8soac5cuenab）
 
 ## 模型依赖
 
